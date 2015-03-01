@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+  <head>
+    <title>Modal Service Demo</title>
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+  <body>
+    <button class="btn" data-ng-click="message()">Message</button>
+    <br />
+
+    <button class="btn" data-ng-click="confirm()">Confirm</button>
+    <br />
+    
+    <button class="btn" data-ng-click="form()">Form</button>
+    <br />
+  </body>
+</html>
