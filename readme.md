@@ -20,9 +20,9 @@ Now you can use the modals for general messages. There are three different types
 #### Message Dialog
 
 A simple message with an Ok button. It takes 3 parameters, where the third is optional:
-1. Window title
-2. Message text
-3. Function to trigger before the window closes (optional)
+1.  Window title
+2.  Message text
+3.  Function to trigger before the window closes (optional)
 
 If the function is not sendt, the window closes.
 
@@ -39,10 +39,10 @@ This dialog would be nice to use when you need to show the user a message. i.e. 
 #### Confirm Dialog
 
 Takes four paramters, where the third and fourth parameter is optional:
-1. Window title
-2. Message text
-3. Function to trigger before the window closes on Ok button (optional)
-4. Function to trigger before the window closes on Cancel button (Optional)
+1.  Window title
+2.  Message text
+3.  Function to trigger before the window closes on Ok button (optional)
+4.  Function to trigger before the window closes on Cancel button (Optional)
 
 Default action for the buttons will be to close the modal
 
@@ -61,10 +61,10 @@ The fourth parameter is skiped and the window will only close on Cancel action.
 #### Form Dialog
 
 Takes four paramters, where the fourth parameter is optional:
-1. Window title
-2. URI to the form you wish to present the user in the modal-body
-3. Function to trigger when Ok is clicked. It returns a boolean, true will close the window. This enables you to validate formdata before an action is made. It also takes an object as parameter. This is the formdata object.
-4. Function to trigger before the window closes on Cancel button (Optional)
+1.  Window title
+2.  URI to the form you wish to present the user in the modal-body
+3.  Function to trigger when Ok is clicked. It returns a boolean, true will close the window. This enables you to validate formdata before an action is made. It also takes an object as parameter. This is the formdata object.
+4.  Function to trigger before the window closes on Cancel button (Optional)
 
 ##### Where to Use
 
