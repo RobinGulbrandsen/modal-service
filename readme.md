@@ -1,14 +1,14 @@
-# Install Guide
+### Install Guide
 
 Coming soon(tm)
 
-# Info
+### Info
 
 When you need to display a message to the user, get confirmation or register data. Modal service will provide this functionality. The modal contains three sections, a header for title, a body for content and a footer for options. Use css/less to design this to make the modals a natural part of the application. Take a look at the *.tpl.htmls in app/modal-service/*tpl.html
 
 The service is inspirated by JOptionPane for Java.
 
-# How to Use
+### How to Use
 
 Add dependancy in your controller
 
@@ -17,40 +17,40 @@ Add dependancy in your controller
 
 Now you can use the modals for general messages. There are three different types: messageDialog, confirmDialog and formDialog.
 
-### Message Dialog
+#### Message Dialog
 
 A simple message with an Ok button. It takes 3 parameters, where the third is optional:
-* 1st: Window title
-* 2nd: Message text
-* 3rd: Function to trigger before the window closes (optional)
+1. Window title
+2. Message text
+3. Function to trigger before the window closes (optional)
 
 If the function is not sendt, the window closes.
 
-#### Where to Use
+##### Where to Use
 
 This dialog would be nice to use when you need to show the user a message. i.e. when you recieve an error code from the server.
 
-#### Code sample
+##### Code sample
 
     modalService.messageDialog("Window Title", "Informative text", function() {
 		console.log("Ok button clicked!");
 	});
 
-### Confirm Dialog
+#### Confirm Dialog
 
 Takes four paramters, where the third and fourth parameter is optional:
-* 1st: Window title
-* 2nd: Message text
-* 3rd: Function to trigger before the window closes on Ok button (optional)
-* 4th: Function to trigger before the window closes on Cancel button (Optional)
+1. Window title
+2. Message text
+3. Function to trigger before the window closes on Ok button (optional)
+4. Function to trigger before the window closes on Cancel button (Optional)
 
 Default action for the buttons will be to close the modal
 
-#### Where to Use
+##### Where to Use
 
 This dialog would be nice to use when you need the user to confirm an action. i.e. when the user wants to delete an item.
 
-#### Code sample
+##### Code sample
 
 	modalService.confirmDialog("Delete element", "Are you sure you want to delete?", function() {
 		// Do http call to server to delete selected element
@@ -58,19 +58,19 @@ This dialog would be nice to use when you need the user to confirm an action. i.
 
 The fourth parameter is skiped and the window will only close on Cancel action.
 
-### Form Dialog
+#### Form Dialog
 
 Takes four paramters, where the fourth parameter is optional:
-* 1st: Window title
-* 2nd: URI to the form you wish to present the user in the modal-body
-* 3rd: Function to trigger when Ok is clicked. It returns a boolean, true will close the window. This enables you to validate formdata before an action is made. It also takes an object as parameter. This is the formdata object.
-* 4th: Function to trigger before the window closes on Cancel button (Optional)
+1. Window title
+2. URI to the form you wish to present the user in the modal-body
+3. Function to trigger when Ok is clicked. It returns a boolean, true will close the window. This enables you to validate formdata before an action is made. It also takes an object as parameter. This is the formdata object.
+4. Function to trigger before the window closes on Cancel button (Optional)
 
-#### Where to Use
+##### Where to Use
 
 This dialog would be nice to use when you need data from the user, but it's not needed with a form on the page, or an own page for this data.
 
-#### Code sample
+##### Code sample
 
     modalService.formDialog("Window Title", "modal-service/form-dialog.tpl.html", function(formData) {
     	//Resets the error messages in the form
@@ -87,7 +87,7 @@ This dialog would be nice to use when you need data from the user, but it's not 
 		}
 	});
 
-# Credits
+### Credits
 
 Thanks to J. Miller for the boilerplate used to set up bower and grunt in this project.
 https://github.com/ngbp/ngbp
